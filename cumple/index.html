@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>❤️ Feliz Cumpleaños Mi Amor ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:linear-gradient(135deg,#ff9a9e,#fad0c4,#fad0c4);
+overflow-x:hidden;
+color:white;
+
+}
+
+.container{
+
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:20px;
+
+}
+
+.card{
+
+max-width:850px;
+width:100%;
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(12px);
+padding:35px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 20px 40px rgba(0,0,0,.25);
+animation:aparecer 2s ease;
+
+}
+
+@keyframes aparecer{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+h1{
+
+font-family:"Dancing Script",cursive;
+font-size:60px;
+margin-bottom:20px;
+}
+
+.sub{
+
+font-size:22px;
+margin-bottom:30px;
+
+}
+
+img{
+
+width:100%;
+max-width:350px;
+border-radius:20px;
+margin:25px 0;
+box-shadow:0 15px 30px rgba(0,0,0,.3);
+
+}
+
+.message{
+
+font-size:20px;
+line-height:1.8;
+
+}
+
+button{
+
+margin-top:35px;
+padding:15px 35px;
+font-size:18px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+background:white;
+color:#ff4f81;
+font-weight:bold;
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.08);
+
+}
+
+#sorpresa{
+
+display:none;
+margin-top:30px;
+font-size:22px;
+animation:fade 1s;
+
+}
+
+@keyframes fade{
+
+from{opacity:0;}
+to{opacity:1;}
+
+}
+
+/* Corazones */
+
+.heart{
+
+position:fixed;
+bottom:-20px;
+font-size:20px;
+animation:float linear forwards;
+pointer-events:none;
+
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0) rotate(0deg);
+opacity:1;
+}
+
+100%{
+transform:translateY(-120vh) rotate(360deg);
+opacity:0;
+}
+
+}
+
+footer{
+
+padding:30px;
+text-align:center;
+font-size:18px;
+
+}
+
+@media(max-width:768px){
+
+h1{
+font-size:48px;
+}
+
+.message{
+
+font-size:18px;
+
+}
+
+.card{
+
+padding:25px;
+
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<h1>🎂 Feliz Cumpleaños ❤️</h1>
+
+<p class="sub">Para la persona más maravillosa del mundo.</p>
+
+<img src="C:\Users\PC\Desktop\cumple\cumplefoto\foto.jpeg" alt="Nuestra foto">
+
+<div class="message">
+
+<p>
+
+Hoy no solo celebramos el día en que naciste,
+también celebramos la suerte inmensa que tuve al encontrarte.
+
+<br><br>
+
+Desde que llegaste a mi vida todo tiene más sentido.
+Tus sonrisas iluminan mis días,
+tus abrazos son mi lugar favorito
+y tu amor es el regalo más bonito que la vida me ha dado.
+
+<br><br>
+
+Quiero que este nuevo año de vida esté lleno de sueños cumplidos,
+momentos inolvidables y muchísimas sonrisas.
+
+<br><br>
+
+Gracias por hacerme feliz,
+por estar siempre a mi lado
+y por enseñarme cada día lo que significa amar de verdad.
+
+<br><br>
+
+Te prometo seguir construyendo recuerdos contigo,
+acompañarte en cada paso
+y recordarte todos los días lo increíble que eres.
+
+<br><br>
+
+❤️ Feliz cumpleaños, mi amor. ❤️
+
+<br><br>
+
+Te amo muchísimo y espero compartir contigo muchísimos cumpleaños más.
+
+</p>
+
+</div>
+
+<button onclick="mostrar()">
+🎁 Pulsa aquí
+</button>
+
+<div id="sorpresa">
+
+<h2>❤️ Eres el mejor regalo que la vida me pudo dar ❤️</h2>
+
+<p style="margin-top:15px;">
+Espero seguir celebrando cada cumpleaños a tu lado.
+Te amo infinitamente. 💖
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+Hecho con muchísimo ❤️ solo para ti.
+
+</footer>
+
+<script>
+
+function mostrar(){
+
+document.getElementById("sorpresa").style.display="block";
+
+}
+
+function corazones(){
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(Math.random()*20+15)+"px";
+
+heart.style.animationDuration=(Math.random()*5+4)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},9000);
+
+}
+
+setInterval(corazones,300);
+
+</script>
+
+</body>
+</html>
